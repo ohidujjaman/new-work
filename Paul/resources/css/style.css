@@ -1,0 +1,243 @@
+/*===========================
+TEMPLATE NAME : PAUL LAPKIN
+TEMPLATE URI : .............COM
+AUTHOR NAME : FAHEEM ABRAR
+AUTHOR URI : ...............COM
+VERSION : 1.0
+DESCRIPTION : A SIMPLE TEMPLATE DESIGN
+===============================*/
+
+/* CSS INDEX ======================
+0. COMMON CSS
+1. REUSABLE COMPONENTS
+2. HOME
+2. ABOUT
+3. PROCESS
+4. EXPERIENCE
+==================================*/
+
+/* COMMON CSS */
+html {
+    font-size: 62.5%;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* REUSABLE COMPONENTS */
+.container {
+    max-width: 118rem;
+    margin: auto;
+}
+section {
+    padding: 12rem 0;
+}
+.section-tittle{
+    text-align: center;
+}
+.btn {
+    
+    background: #000;
+    width: 20rem;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    border: .2rem solid #ff2b4a;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+/* NAVIGATION */
+nav {
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+nav.uk-sticky-fixed {
+    position: fixed!important;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.95);
+    padding: 1.5rem 0;
+}
+.logo {
+    float: left;
+}
+.menu {
+    float: right;
+}
+.menu a ion-icon {
+    color: #fff;
+    font-size: 4.5rem;
+    border: .1rem solid #fff;
+}
+/* HOME */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/hero.jpg) no-repeat center / cover;
+    position: relative;
+    height: 100vh;
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+h1 {
+    color: #fff;
+    font-size: 6.5rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    margin: 0;
+    border-top: .2rem solid #fff;
+    border-bottom: .2rem solid #fff;
+}
+.hero-text span {
+    color: #fff;
+    margin-top: 1rem;
+    display: block;
+    font-size: 2rem;
+}
+.scroll-down {
+    position: absolute;
+    bottom: 4.5rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+.scroll-down a ion-icon {
+    color: #fff;
+    font-size: 4.5rem;
+    position: relative;
+    animation: allow 1s infinite;
+}
+/* scroll down button */
+@keyframes allow {
+    0% {
+        top: 1rem;
+    }
+    65% {
+        top: 3rem;
+    }
+    100% {
+        top: 1rem;
+    }
+}
+/* ABOUT */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 6rem;
+}
+.paul {
+    width: 100%;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+.about-grid-item h4 {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+}
+.about-grid-item p {
+    color: #000;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 3.5rem;
+}
+.btn-a {
+    background: #ff2b4a;
+}
+.btn-a a {
+    color: #fff;
+    text-decoration: none;
+}
+.btn-a:hover {
+    background: #fff;
+}
+.btn-a a:hover {
+    color: #ff2b4a;
+}
+/* 3. PROCESS */
+#process {
+    background: #f6f6f6;
+}
+.section-tittle h2 {
+    font-size: 4rem;
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+}
+.section-tittle p {
+    color: #6f6f6f;
+}
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin-top: 5rem;
+}
+.process-grid-item {
+    text-align: center;
+    background: #fff;
+    padding: 8.5rem 0;
+}
+.process-grid-item:nth-child(1) {
+    background: #10c6fc;
+}
+.process-grid-item:nth-child(2) {
+    background: #835aeb;
+}
+.process-grid-item:nth-child(3) {
+    background: #002453;
+}
+.process-grid-item:nth-child(4) {
+    background: #ff2b4a;
+}
+.process-grid-item ion-icon {
+    color: #fff;
+    font-size: 4.5rem;
+}
+.process-grid-item h4 {
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+/* EXPERIENCE */
+#exp {
+    background: #ccc url(img/experience.jpg) no-repeat center top /cover fixed;
+}
+.exp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+.exp-grid-item {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 3.5rem 2rem;
+    color: #fff;
+}
+.exp-grid-item h3 {
+    color: #fff;
+    font-size: 2.9rem;
+}
+.job h4 {
+    color: #fff;
+    font-size: 2rem;
+}
